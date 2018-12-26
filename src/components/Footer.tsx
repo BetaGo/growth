@@ -89,6 +89,7 @@ const Footer: React.FunctionComponent = () => {
               Weibo
             </a>
           )}
+          <Link to="/rss.xml">RSS</Link>
         </SiteFooterNav>
       </div>
     </footer>
