@@ -8,6 +8,7 @@ import { SocialLink } from '../../styles/shared';
 import config from '../../website-config';
 import Facebook from '../icons/facebook';
 import Twitter from '../icons/twitter';
+import Weibo from '../icons/weibo';
 import SubscribeModal from '../subsribe/SubscribeOverlay';
 import SiteNavLogo from './SiteNavLogo';
 
@@ -174,6 +175,17 @@ class SiteNav extends React.Component<SiteNavProps, SiteNaveState> {
                 rel="noopener noreferrer"
               >
                 <Twitter />
+              </a>
+            )}
+            {config.weibo && (
+              <a
+                className={`${SocialLink}`}
+                href={config.weibo}
+                title="Weibo"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Weibo />
               </a>
             )}
           </SocialLinks>

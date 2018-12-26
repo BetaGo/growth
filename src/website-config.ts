@@ -14,6 +14,7 @@ export interface WebsiteConfig {
   siteUrl: string;
   facebook?: string;
   twitter?: string;
+  weibo?: string;
   /**
    * hide or show all email subscribe boxes
    */
@@ -37,6 +38,7 @@ const config: WebsiteConfig = {
   siteUrl: 'https://life.gouwantong.com',
   facebook: 'https://www.facebook.com/gouwantong',
   twitter: 'https://twitter.com/IronManGWT',
+  weibo: 'https://weibo.com/TrueIronMan',
   showSubscribe: false,
   mailchimpAction: '',
   mailchimpName: '',

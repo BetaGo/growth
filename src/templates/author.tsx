@@ -1,7 +1,7 @@
 import { graphql } from 'gatsby';
 import React from 'react';
-import styled from '@emotion/styled'
-import { css } from 'emotion'
+import styled from '@emotion/styled';
+import { css } from 'emotion';
 
 import Footer from '../components/Footer';
 import SiteNav from '../components/header/SiteNav';
@@ -26,6 +26,7 @@ import Helmet from 'react-helmet';
 import config from '../website-config';
 import Website from '../components/icons/website';
 import Twitter from '../components/icons/twitter';
+import Weibo from '../components/icons/weibo';
 
 const HiddenMobile = css`
   @media (max-width: 500px) {
@@ -95,6 +96,7 @@ interface AuthorTemplateProps {
       website?: string;
       twitter?: string;
       facebook?: string;
+      weibo?: string;
       location?: string;
       profile_image?: {
         childImageSharp: {
@@ -127,8 +129,8 @@ const Author: React.FunctionComponent<AuthorTemplateProps> = props => {
         <meta property="og:type" content="profile" />
         <meta property="og:title" content={`${author.id} - ${config.title}`} />
         <meta property="og:url" content={config.siteUrl + props.pathContext.slug} />
-        <meta property="article:publisher" content="https://www.facebook.com/ghost" />
-        <meta property="article:author" content="https://www.facebook.com/ghost" />
+        <meta property="article:publisher" content="https://www.facebook.com/gouwantong" />
+        <meta property="article:author" content="https://www.facebook.com/gouwantong" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content={`${author.id} - ${config.title}`} />
         <meta name="twitter:url" content={config.siteUrl + props.pathContext.slug} />
@@ -203,6 +205,17 @@ const Author: React.FunctionComponent<AuthorTemplateProps> = props => {
                     <Facebook />
                   </a>
                 )}
+                {author.weibo && (
+                  <a
+                    className={`${SocialLink} social-link-wb`}
+                    href={`https://weibo.com/${author.weibo}`}
+                    title="Weibo"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Weibo />
+                  </a>
+                )}
                 {/* TODO: RSS for author */}
                 {/* <a
                   className={`${SocialLink} social-link-rss`}
@@ -250,6 +263,7 @@ export const pageQuery = graphql`
       website
       twitter
       bio
+      weibo
       facebook
       location
       profile_image {
