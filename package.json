@@ -9,6 +9,7 @@
     "build": "gatsby build",
     "clean": "rimraf public",
     "dev": "gatsby develop",
+    "dev-m": "gatsby develop -H 0.0.0.0 -p 8000",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "lint": "tslint -t stylish -p .",
     "lint:fix": "tslint -p tsconfig.json -t stylish --fix 'src/**/*.ts' 'test/**/*.ts'",
