@@ -2,14 +2,14 @@
 import { Link } from 'gatsby';
 import * as React from 'react';
 import styled from '@emotion/styled';
-import { css } from 'emotion';
+import { css } from '@emotion/core';
 
 import { SocialLink } from '../../styles/shared';
 import config from '../../website-config';
 import Facebook from '../icons/facebook';
 import Twitter from '../icons/twitter';
 import Weibo from '../icons/weibo';
-import SubscribeModal from '../subsribe/SubscribeOverlay';
+import SubscribeModal from '../subscribe/SubscribeOverlay';
 import SiteNavLogo from './SiteNavLogo';
 
 const HomeNavRaise = css`
@@ -117,17 +117,9 @@ interface SiteNavProps {
   isHome?: boolean;
 }
 
-interface SiteNaveState {
-  isOpen: boolean;
-}
-
-class SiteNav extends React.Component<SiteNavProps, SiteNaveState> {
+class SiteNav extends React.Component<SiteNavProps> {
   subscribe = React.createRef<SubscribeModal>();
 
-  constructor(props: SiteNavProps) {
-    super(props);
-    this.state = { isOpen: false };
-  }
   openModal = () => {
     if (this.subscribe.current) {
       this.subscribe.current.open();
@@ -137,10 +129,10 @@ class SiteNav extends React.Component<SiteNavProps, SiteNaveState> {
   render() {
     const { isHome = false } = this.props;
     return (
-      <nav className={`${isHome ? HomeNavRaise : ''} ${SiteNavStyles}`}>
+      <nav css={[isHome && HomeNavRaise, SiteNavStyles]}>
         <SiteNavLeft>
           {!isHome && <SiteNavLogo />}
-          <ul className={`${NavStyles}`} role="menu">
+          <ul css={NavStyles} role="menu">
             {/* TODO: mark current nav item - add class nav-current */}
             <li role="menuitem">
               <Link to="/">Home</Link>
@@ -157,7 +149,7 @@ class SiteNav extends React.Component<SiteNavProps, SiteNaveState> {
           <SocialLinks>
             {config.facebook && (
               <a
-                className={`${SocialLink}`}
+                css={SocialLink}
                 href={config.facebook}
                 target="_blank"
                 title="Facebook"
@@ -168,7 +160,7 @@ class SiteNav extends React.Component<SiteNavProps, SiteNaveState> {
             )}
             {config.twitter && (
               <a
-                className={`${SocialLink}`}
+                css={SocialLink}
                 href={config.twitter}
                 title="Twitter"
                 target="_blank"
@@ -179,7 +171,7 @@ class SiteNav extends React.Component<SiteNavProps, SiteNaveState> {
             )}
             {config.weibo && (
               <a
-                className={`${SocialLink}`}
+                css={SocialLink}
                 href={config.weibo}
                 title="Weibo"
                 target="_blank"

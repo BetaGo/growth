@@ -12,7 +12,13 @@ export interface WebsiteConfig {
    * blog full path, no ending slash!
    */
   siteUrl: string;
+  /**
+   * full url, no username
+   */
   facebook?: string;
+  /**
+   * full url, no username
+   */
   twitter?: string;
   weibo?: string;
   /**
@@ -27,6 +33,20 @@ export interface WebsiteConfig {
    * this is the hidden input field name
    */
   mailchimpName?: string;
+  /**
+   * name and id of the mailchimp email field
+   */
+  mailchimpEmailFieldName?: string;
+  /**
+  /**
+   * Meta tag for Google Webmaster Tools
+   */
+  googleSiteVerification?: string;
+  /**
+  /**
+   * Appears alongside the footer, after the credits
+   */
+  footer?: string;
 }
 
 const config: WebsiteConfig = {
@@ -42,6 +62,9 @@ const config: WebsiteConfig = {
   showSubscribe: false,
   mailchimpAction: '',
   mailchimpName: '',
+  mailchimpEmailFieldName: 'MERGE0',
+  googleSiteVerification: 'GoogleCode',
+  footer: '',
 };
 
 export default config;

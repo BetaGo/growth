@@ -10,6 +10,7 @@ module.exports = {
     'MarkdownRemark.frontmatter.author': 'AuthorYaml',
   },
   plugins: [
+    'gatsby-plugin-sitemap',
     'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-source-filesystem',
@@ -36,7 +37,7 @@ module.exports = {
             resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 1170,
-              quality: 100,
+              quality: 90,
             },
           },
         ],
@@ -53,7 +54,6 @@ module.exports = {
     'gatsby-plugin-typescript',
     'gatsby-transformer-sharp',
     'gatsby-plugin-react-helmet',
-    'gatsby-transformer-sharp',
     'gatsby-transformer-yaml',
     'gatsby-plugin-feed',
     {
@@ -65,7 +65,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: 'UA-XXXX-Y',
+        trackingId: 'UA-146244405-2',
         // Puts tracking script in the head instead of the body
         head: true,
         // IP anonymization for GDPR compliance
@@ -80,6 +80,5 @@ module.exports = {
         siteSpeedSampleRate: 10,
       },
     },
-    `gatsby-plugin-favicon`,
   ],
 };

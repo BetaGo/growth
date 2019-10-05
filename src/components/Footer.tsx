@@ -2,7 +2,7 @@ import { Link } from 'gatsby';
 import { setLightness } from 'polished';
 import * as React from 'react';
 import styled from '@emotion/styled';
-import { css } from 'emotion';
+import { css } from '@emotion/core';
 
 import { colors } from '../styles/colors';
 import { outer, inner } from '../styles/shared';
@@ -65,12 +65,17 @@ const SiteFooterNav = styled.nav`
   }
 `;
 
-const Footer: React.FunctionComponent = () => {
+const Footer: React.FC = () => {
   return (
-    <footer className={`${outer} ${SiteFooter}`}>
-      <div className={`${inner} ${SiteFooterContent}`}>
+    <footer css={[outer, SiteFooter]}>
+      <div css={[inner, SiteFooterContent]}>
         <section className="copyright">
-          <Link to="/">{config.title}</Link> &copy; {new Date().getFullYear()}
+          <Link to="/">{config.title}</Link> &copy; {new Date().getFullYear()}{' '}
+          {config.footer && (
+            <Link to="/">
+              | {config.title} {config.footer}
+            </Link>
+          )}
         </section>
         <SiteFooterNav>
           <Link to="/">Latest Posts</Link>
@@ -89,7 +94,7 @@ const Footer: React.FunctionComponent = () => {
               Weibo
             </a>
           )}
-          <Link to="/rss.xml">RSS</Link>
+          <a href="/rss.xml">RSS</a>
         </SiteFooterNav>
       </div>
     </footer>

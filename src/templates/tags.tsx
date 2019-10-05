@@ -30,7 +30,7 @@ interface TagTemplateProps {
   };
   data: {
     allTagYaml: {
-      edges: {
+      edges: Array<{
         node: {
           id: string;
           description: string;
@@ -40,19 +40,19 @@ interface TagTemplateProps {
             };
           };
         };
-      }[];
+      }>;
     };
     allMarkdownRemark: {
       totalCount: number;
-      edges: {
+      edges: Array<{
         node: PageContext;
-      }[];
+      }>;
     };
   };
 }
 
-const Tags: React.FunctionComponent<TagTemplateProps> = props => {
-  const tag = props.pageContext.tag;
+const Tags: React.FC<TagTemplateProps> = props => {
+  const tag = (props.pageContext.tag) ? props.pageContext.tag : '';
   const { edges, totalCount } = props.data.allMarkdownRemark;
   const tagData = props.data.allTagYaml.edges.find(
     n => n.node.id.toLowerCase() === tag.toLowerCase(),
@@ -86,15 +86,16 @@ const Tags: React.FunctionComponent<TagTemplateProps> = props => {
       </Helmet>
       <Wrapper>
         <header
-          className={`${SiteHeader} ${outer} ${tagData && tagData.node.image ? '' : 'no-cover'}`}
+          className={`${tagData && tagData.node.image ? '' : 'no-cover'}`}
+          css={[outer, SiteHeader]}
           style={{
             backgroundImage:
-              tagData && tagData.node.image
-                ? `url('${tagData.node.image.childImageSharp.fluid.src}')`
-                : '',
+              tagData && tagData.node.image ?
+                `url('${tagData.node.image.childImageSharp.fluid.src}')` :
+                '',
           }}
         >
-          <div className={`${inner}`}>
+          <div css={inner}>
             <SiteNav isHome={false} />
             <SiteHeaderContent>
               <SiteTitle>{tag}</SiteTitle>
@@ -104,17 +105,17 @@ const Tags: React.FunctionComponent<TagTemplateProps> = props => {
                 ) : (
                   <>
                     A collection of {totalCount > 1 && `${totalCount} posts`}
-                    {totalCount === 1 && `1 post`}
-                    {totalCount === 0 && `No posts`}
+                    {totalCount === 1 && '1 post'}
+                    {totalCount === 0 && 'No posts'}
                   </>
                 )}
               </SiteDescription>
             </SiteHeaderContent>
           </div>
         </header>
-        <main id="site-main" className={`${SiteMain} ${outer}`}>
-          <div className={`${inner}`}>
-            <div className={`${PostFeed} ${PostFeedRaise}`}>
+        <main id="site-main" css={[SiteMain, outer]}>
+          <div css={inner}>
+            <div css={[PostFeed, PostFeedRaise]}>
               {edges.map(({ node }) => (
                 <PostCard key={node.fields.slug} post={node} />
               ))}
@@ -149,7 +150,7 @@ export const pageQuery = graphql`
     allMarkdownRemark(
       limit: 2000
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { tags: { in: [$tag] } } }
+      filter: { frontmatter: { tags: { in: [$tag] }, draft: { ne: true } } }
     ) {
       totalCount
       edges {
@@ -173,7 +174,7 @@ export const pageQuery = graphql`
               avatar {
                 children {
                   ... on ImageSharp {
-                    fixed(quality: 100) {
+                    fixed(quality: 90) {
                       src
                     }
                   }
