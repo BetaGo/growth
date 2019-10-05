@@ -27,6 +27,7 @@ import config from '../website-config';
 import Website from '../components/icons/website';
 import Twitter from '../components/icons/twitter';
 import Weibo from '../components/icons/weibo';
+import Github from '../components/icons/github';
 
 const HiddenMobile = css`
   @media (max-width: 500px) {
@@ -97,6 +98,7 @@ interface AuthorTemplateProps {
       twitter?: string;
       facebook?: string;
       weibo?: string;
+      github?: string;
       location?: string;
       // eslint-disable-next-line @typescript-eslint/camelcase
       profile_image?: {
@@ -186,18 +188,16 @@ const Author: React.FC<AuthorTemplateProps> = props => {
                   {totalCount === 0 && 'No posts'} <Bull>•</Bull>
                 </div>
                 {author.website && (
-                  <div>
-                    <a
-                      className="social-link-wb"
-                      css={SocialLink}
-                      href={author.website}
-                      title="Website"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Website />
-                    </a>
-                  </div>
+                  <a
+                    className="social-link-wb"
+                    css={SocialLink}
+                    href={author.website}
+                    title="Website"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Website />
+                  </a>
                 )}
                 {author.twitter && (
                   <a
@@ -233,6 +233,18 @@ const Author: React.FC<AuthorTemplateProps> = props => {
                     rel="noopener noreferrer"
                   >
                     <Weibo />
+                  </a>
+                )}
+                {author.github && (
+                  <a
+                    className="social-link-wb"
+                    css={SocialLink}
+                    href={`https://github.com/${author.github}`}
+                    title="GitHub"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Github />
                   </a>
                 )}
                 {/* TODO: RSS for author */}
@@ -280,6 +292,7 @@ export const pageQuery = graphql`
       twitter
       bio
       weibo
+      github
       facebook
       location
       profile_image {

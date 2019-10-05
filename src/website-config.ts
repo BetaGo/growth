@@ -21,6 +21,7 @@ export interface WebsiteConfig {
    */
   twitter?: string;
   weibo?: string;
+  github?: string;
   /**
    * hide or show all email subscribe boxes
    */
@@ -59,6 +60,7 @@ const config: WebsiteConfig = {
   facebook: 'https://www.facebook.com/gouwantong',
   twitter: 'https://twitter.com/IronManGWT',
   weibo: 'https://weibo.com/TrueIronMan',
+  github: 'https://github.com/BetaGo',
   showSubscribe: false,
   mailchimpAction: '',
   mailchimpName: '',

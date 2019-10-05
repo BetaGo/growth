@@ -11,6 +11,7 @@ import Twitter from '../icons/twitter';
 import Weibo from '../icons/weibo';
 import SubscribeModal from '../subscribe/SubscribeOverlay';
 import SiteNavLogo from './SiteNavLogo';
+import Github from '../icons/github';
 
 const HomeNavRaise = css`
   @media (min-width: 900px) {
@@ -178,6 +179,17 @@ class SiteNav extends React.Component<SiteNavProps> {
                 rel="noopener noreferrer"
               >
                 <Weibo />
+              </a>
+            )}
+            {config.github && (
+              <a
+                css={SocialLink}
+                href={config.github}
+                title="GitHub"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Github />
               </a>
             )}
           </SocialLinks>
