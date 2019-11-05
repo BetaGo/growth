@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
   siteMetadata: {
     title: '忘川',
-    description: '把生活过成诗',
+    description: 'We Work in the Dark to Serve the Light',
     siteUrl: 'https://life.gouwantong.com', // full path to blog - no ending slash
   },
   mapping: {
