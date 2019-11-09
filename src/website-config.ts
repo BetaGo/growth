@@ -56,7 +56,7 @@ const config: WebsiteConfig = {
   coverImage: 'img/blog-cover.jpg',
   logo: 'img/wantong-logo.png',
   lang: 'zh-cn',
-  siteUrl: 'https://life.gouwantong.com',
+  siteUrl: 'https://life.gwthub.com',
   facebook: 'https://www.facebook.com/gouwantong',
   twitter: 'https://twitter.com/IronManGWT',
   weibo: 'https://weibo.com/TrueIronMan',

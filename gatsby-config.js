@@ -4,7 +4,7 @@ module.exports = {
   siteMetadata: {
     title: '忘川',
     description: 'We Work in the Dark to Serve the Light',
-    siteUrl: 'https://life.gouwantong.com', // full path to blog - no ending slash
+    siteUrl: 'https://life.gwthub.com', // full path to blog - no ending slash
   },
   mapping: {
     'MarkdownRemark.frontmatter.author': 'AuthorYaml',
@@ -47,7 +47,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-canonical-urls',
       options: {
-        siteUrl: 'https://life.gouwantong.com',
+        siteUrl: 'https://life.gwthub.com',
       },
     },
     'gatsby-plugin-emotion',
