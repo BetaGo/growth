@@ -52,7 +52,7 @@ export interface WebsiteConfig {
 
 const config: WebsiteConfig = {
   title: '忘川',
-  description: 'We Work in the Dark to Serve the Light',
+  description: 'Make Life Worth Living',
   coverImage: 'img/blog-cover.jpg',
   logo: 'img/wantong-logo.png',
   lang: 'zh-cn',

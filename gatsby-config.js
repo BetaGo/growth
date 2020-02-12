@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
   siteMetadata: {
     title: '忘川',
-    description: 'We Work in the Dark to Serve the Light',
+    description: 'Make Life Worth Living',
     siteUrl: 'https://life.gwthub.com', // full path to blog - no ending slash
   },
   mapping: {
