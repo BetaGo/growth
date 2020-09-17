@@ -51,12 +51,12 @@ export interface WebsiteConfig {
 }
 
 const config: WebsiteConfig = {
-  title: '忘川',
+  title: '土拨鼠看着自己的影子发出的尖叫',
   description: 'Make Life Worth Living',
   coverImage: 'img/blog-cover.jpg',
   logo: 'img/wantong-logo.png',
   lang: 'zh-cn',
-  siteUrl: 'https://life.gwthub.com',
+  siteUrl: 'https://2b.no1.me',
   facebook: 'https://www.facebook.com/gouwantong',
   twitter: 'https://twitter.com/IronManGWT',
   weibo: 'https://weibo.com/TrueIronMan',

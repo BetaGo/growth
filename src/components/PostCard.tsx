@@ -3,31 +3,11 @@ import Img from 'gatsby-image';
 import * as _ from 'lodash';
 import { lighten } from 'polished';
 import * as React from 'react';
-import styled from '@emotion/styled';
+import styled from '../styles/styled';
 import { css } from '@emotion/core';
 
 import { colors } from '../styles/colors';
 import { PageContext } from '../templates/post';
-
-const PostCardStyles = css`
-  flex: 1 1 300px;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  margin: 0 20px 40px;
-  min-height: 300px;
-  background: #fff center center;
-  background-size: cover;
-  border-radius: 5px;
-  box-shadow: rgba(39, 44, 49, 0.06) 8px 14px 38px, rgba(39, 44, 49, 0.03) 1px 3px 8px;
-  transition: all 0.5s ease;
-
-  :hover {
-    box-shadow: rgba(39, 44, 49, 0.07) 8px 28px 50px, rgba(39, 44, 49, 0.04) 1px 6px 12px;
-    transition: all 0.4s ease;
-    transform: translate3D(0, -1px, 0) scale(1.02);
-  }
-`;
 
 const PostCardImageLink = css`
   position: relative;
@@ -39,7 +19,7 @@ const PostCardImageLink = css`
 const PostCardImage = styled.div`
   width: auto;
   height: 200px;
-  background: ${colors.lightgrey} no-repeat center center;
+  background: ${({ theme }) => theme.palette.background.paper} no-repeat center center;
   background-size: cover;
 `;
 
@@ -55,7 +35,7 @@ const PostCardContentLink = css`
   flex-grow: 1;
   display: block;
   padding: 25px 25px 0;
-  color: ${colors.darkgrey};
+  color: ${colors.nord7};
 
   :hover {
     text-decoration: none;
@@ -65,7 +45,7 @@ const PostCardContentLink = css`
 const PostCardTags = styled.span`
   display: block;
   margin-bottom: 4px;
-  color: ${colors.midgrey};
+  color: ${colors.nord8};
   font-size: 1.2rem;
   line-height: 1.15em;
   font-weight: 500;
@@ -167,7 +147,7 @@ const StaticAvatar = css`
   margin: 0 -5px;
   width: 34px;
   height: 34px;
-  border: #fff 2px solid;
+  border: rgba(255, 255, 255, 0.5) 2px solid;
   border-radius: 100%;
 `;
 
@@ -184,12 +164,36 @@ const AuthorProfileImage = styled.img`
 const ReadingTime = styled.span`
   flex-shrink: 0;
   margin-left: 20px;
-  color: ${colors.midgrey};
+  color: ${({ theme }) => theme.palette.text.hint};
   font-size: 1.2rem;
   line-height: 33px;
   font-weight: 500;
   letter-spacing: 0.5px;
   text-transform: uppercase;
+`;
+
+const PostCardRoot = styled.article`
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin: 0 20px 40px;
+  min-height: 300px;
+  background: ${({ theme }) => theme.palette.background.paper} center center;
+  background-size: cover;
+  border-radius: 5px;
+  box-shadow: rgba(39, 44, 49, 0.06) 8px 14px 38px, rgba(39, 44, 49, 0.03) 1px 3px 8px;
+  transition: all 0.5s ease;
+
+  :hover {
+    box-shadow: rgba(39, 44, 49, 0.07) 8px 28px 50px, rgba(39, 44, 49, 0.04) 1px 6px 12px;
+    transition: all 0.4s ease;
+    transform: translate3D(0, -1px, 0) scale(1.02);
+  }
+
+  .post-card-content-link {
+    color: ${({ theme }) => theme.palette.text.secondary};
+  }
 `;
 
 export interface PostCardProps {
@@ -198,22 +202,19 @@ export interface PostCardProps {
 
 const PostCard: React.FC<PostCardProps> = ({ post }) => {
   return (
-    <article
-      className={`post-card ${post.frontmatter.image ? '' : 'no-image'}`}
-      css={PostCardStyles}
-    >
+    <PostCardRoot className={`post-card ${post.frontmatter.image ? '' : 'no-image'}`}>
       {post.frontmatter.image && (
         <Link className="post-card-image-link" css={PostCardImageLink} to={post.fields.slug}>
           <PostCardImage className="post-card-image">
             {post.frontmatter.image &&
               post.frontmatter.image.childImageSharp &&
               post.frontmatter.image.childImageSharp.fluid && (
-              <Img
-                alt={`${post.frontmatter.title} cover image`}
-                style={{ height: '100%' }}
-                fluid={post.frontmatter.image.childImageSharp.fluid}
-              />
-            )}
+                <Img
+                  alt={`${post.frontmatter.title} cover image`}
+                  style={{ height: '100%' }}
+                  fluid={post.frontmatter.image.childImageSharp.fluid}
+                />
+              )}
           </PostCardImage>
         </Link>
       )}
@@ -244,7 +245,7 @@ const PostCard: React.FC<PostCardProps> = ({ post }) => {
           <ReadingTime>{post.timeToRead} min read</ReadingTime>
         </PostCardMeta>
       </PostCardContent>
-    </article>
+    </PostCardRoot>
   );
 };
 

@@ -47,10 +47,9 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-canonical-urls',
       options: {
-        siteUrl: 'https://life.gwthub.com',
+        siteUrl: 'https://2b.no1.me',
       },
     },
-    'gatsby-plugin-sass',
     'gatsby-plugin-emotion',
     'gatsby-transformer-sharp',
     'gatsby-plugin-react-helmet',

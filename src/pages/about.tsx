@@ -13,7 +13,6 @@ import Helmet from 'react-helmet';
 
 const PageTemplate = css`
   .site-main {
-    background: #fff;
     padding-bottom: 4vw;
   }
 `;

@@ -1,9 +1,9 @@
-import { lighten, setLightness, darken, setSaturation } from 'polished';
+import { darken, setSaturation } from 'polished';
 import * as React from 'react';
-import styled from '@emotion/styled';
 import RehypeReact from 'rehype-react';
 
 import { colors } from '../styles/colors';
+import styled from '../styles/styled';
 
 export const PostFullContent = styled.section`
   position: relative;
@@ -13,7 +13,7 @@ export const PostFullContent = styled.section`
   font-family: Georgia, serif;
   font-size: 2.2rem;
   line-height: 1.6em;
-  background: #fff;
+  background: ${({ theme }) => theme.palette.background.default};
 
   @media (max-width: 1170px) {
     padding: 5vw 7vw 0;
@@ -76,20 +76,19 @@ export const PostFullContent = styled.section`
   }
 
   a {
-    color: #000;
+    color: ${colors.nord7};
     word-break: break-word;
-    box-shadow: ${colors.blue} 0 -1px 0 inset;
+    box-shadow: ${colors.nord7} 0 -1px 0 inset;
   }
 
   a:hover {
-    color: ${colors.blue};
+    color: ${({ theme }) => theme.palette.text.hint};
     text-decoration: none;
   }
 
   strong,
   em {
-    /* color: color(var(--darkgrey) l(-5%)); */
-    color: ${darken('0.05', colors.darkgrey)};
+    color: ${colors.nord12};
   }
 
   small {
@@ -97,7 +96,7 @@ export const PostFullContent = styled.section`
     line-height: 1.6em;
   }
 
-  li:first-child {
+  li:first-of-type {
     margin-top: 0;
   }
 
@@ -212,9 +211,7 @@ export const PostFullContent = styled.section`
     margin-left: -10px;
     width: 1px;
     height: 30px;
-    /* background: color(var(--lightgrey) l(+10%)); */
-    background: ${lighten('0.1', colors.lightgrey)};
-    box-shadow: #fff 0 0 0 5px;
+    background: ${({ theme }) => theme.palette.divider};
     transform: rotate(45deg);
   }
 
@@ -224,7 +221,7 @@ export const PostFullContent = styled.section`
   h4,
   h5,
   h6 {
-    color: ${setLightness('0.05', colors.darkgrey)};
+    color: ${({ theme }) => theme.palette.text.primary};
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
       'Open Sans', 'Helvetica Neue', sans-serif;
   }
@@ -278,7 +275,6 @@ export const PostFullContent = styled.section`
     margin: 0.5em 0;
     padding: 1em 0 1.5em;
     border: 0;
-    color: ${colors.blue};
     font-family: Georgia, serif;
     font-size: 3.2rem;
     line-height: 1.35em;
@@ -333,7 +329,7 @@ export const PostFullContent = styled.section`
     background-repeat: no-repeat;
   }
 
-  table td:first-child {
+  table td:first-of-type {
     background-image: linear-gradient(
       to right,
       rgba(255, 255, 255, 1) 50%,
@@ -355,21 +351,19 @@ export const PostFullContent = styled.section`
   }
 
   table th {
-    color: ${colors.darkgrey};
+    color: ${({ theme }) => theme.palette.text.primary};
     font-size: 1.2rem;
     font-weight: 700;
     letter-spacing: 0.2px;
     text-align: left;
     text-transform: uppercase;
-    /* background-color: color(var(--whitegrey) l(+4%)); */
-    background-color: ${lighten('0.04', colors.whitegrey)};
+    background-color: ${({ theme }) => theme.palette.background.paper};
   }
 
   table th,
   table td {
     padding: 6px 12px;
-    /* border: color(var(--whitegrey) l(-1%) s(-5%)) 1px solid; */
-    border: ${setSaturation('0.05', darken('0.01', colors.whitegrey))} 1px solid;
+    border: ${({ theme }) => setSaturation('0.05', darken('0.01', theme.palette.divider))} 1px solid;
   }
 
   @media (max-width: 500px) {

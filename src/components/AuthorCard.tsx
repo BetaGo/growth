@@ -1,10 +1,10 @@
 import { Link } from 'gatsby';
 import * as _ from 'lodash';
 import * as React from 'react';
-import styled from '@emotion/styled';
 
 import { colors } from '../styles/colors';
 import { AuthorProfileImage } from '../styles/shared';
+import styled from '../styles/styled';
 
 const AuthorCardSection = styled.section`
   display: flex;
@@ -16,7 +16,7 @@ const AuthorCardName = styled.h4`
   font-size: 2rem;
 
   a {
-    color: ${colors.darkgrey};
+    color: ${colors.nord7};
     font-weight: 700;
   }
 

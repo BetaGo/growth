@@ -4,13 +4,14 @@ import { darken } from 'polished';
 import { css } from '@emotion/core';
 
 import { colors } from '../styles/colors';
+import styled from '../styles/styled';
 
 export interface PaginationProps {
   currentPage: number;
   numPages: number;
 }
 
-const navCss = css`
+const Nav = styled.nav`
   text-align: center;
   div {
     display: inline-block;
@@ -18,12 +19,12 @@ const navCss = css`
 
   a {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
-    background: #fff;
-    color: black;
+    background: ${({ theme }) => theme.palette.background.paper};
+    color: ${({ theme }) => theme.palette.text.primary};
     float: left;
     padding: 8px 16px;
     text-decoration: none;
-    transition: background-color .3s;
+    transition: background-color 0.3s;
     border: 1px solid #ddd;
     margin: 0 4px;
     box-shadow: rgba(39, 44, 49, 0.06) 8px 14px 38px, rgba(39, 44, 49, 0.03) 1px 3px 8px;
@@ -32,13 +33,12 @@ const navCss = css`
     min-width: 50px;
 
     &.active {
-      -webkit-box-shadow:inset 3px 0px 0px 0px ${darken(0.05, colors.darkgrey)};
-      -moz-box-shadow:inset 3px 0px 0px 0px ${darken(0.05, colors.darkgrey)};
-      box-shadow:inset 3px 0px 0px 0px ${darken(0.05, colors.darkgrey)};
+      box-shadow: inset 3px 0px 0px 0px
+        ${({ theme }) => darken(0.1, theme.palette.background.default)};
     }
 
     &:hover:not(.active) {
-      background-color: #ddd;
+      background-color: ${({ theme }) => darken(0.1, theme.palette.background.default)};
     }
 
     &:hover {
@@ -54,7 +54,7 @@ const Pagination: React.FunctionComponent<PaginationProps> = ({ currentPage, num
   const nextPage = (currentPage + 1).toString();
 
   return (
-    <nav css={navCss}>
+    <Nav>
       <div>
         {!isFirst && (
           <Link to={prevPage} rel="prev">
@@ -64,7 +64,11 @@ const Pagination: React.FunctionComponent<PaginationProps> = ({ currentPage, num
         )}
 
         {Array.from({ length: numPages }, (_, i) => (
-          <Link key={`pagination-number${i + 1}`} className={i + 1 === currentPage ? 'active' : ''} to={`/${i === 0 ? '' : i + 1}`}>
+          <Link
+            key={`pagination-number${i + 1}`}
+            className={i + 1 === currentPage ? 'active' : ''}
+            to={`/${i === 0 ? '' : i + 1}`}
+          >
             {i + 1}
           </Link>
         ))}
@@ -76,7 +80,7 @@ const Pagination: React.FunctionComponent<PaginationProps> = ({ currentPage, num
           </Link>
         )}
       </div>
-    </nav>
+    </Nav>
   );
 };
 
