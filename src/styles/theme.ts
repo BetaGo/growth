@@ -93,7 +93,11 @@ export const darkTheme: ITheme = {
   },
 };
 
-export const themeDict = {
+export const themeDict: Record<string, ITheme> = {
   dark: darkTheme,
   light: lightTheme,
+};
+
+export const getTheme = (mode: string) => {
+  return themeDict[mode] || darkTheme;
 };

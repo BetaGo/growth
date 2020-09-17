@@ -23,6 +23,9 @@ import {
   SiteTitle,
 } from '../styles/shared';
 import { PageContext } from './post';
+import styled from '../styles/styled';
+import ThemeSwitchIcon from '../components/icons/theme-switch';
+import { useThemeMode } from '../hooks/useThemeMode';
 
 const HomePosts = css`
   @media (min-width: 795px) {
@@ -66,6 +69,17 @@ const HomePosts = css`
   }
 `;
 
+const ThemeSwitchWrapper = styled.div`
+  position: absolute;
+  padding: 3px;
+  top: 16px;
+  width: 32px;
+  height: 32px;
+  right: 16px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  cursor: pointer;
+`;
 export interface IndexProps {
   pageContext: {
     currentPage: number;
@@ -91,6 +105,7 @@ export interface IndexProps {
 }
 
 const IndexPage: React.FC<IndexProps> = (props) => {
+  const [, toggleThemeMode] = useThemeMode();
   const width = props.data.header.childImageSharp.fluid.sizes.split(', ')[1].split('px')[0];
   const height = String(Number(width) / props.data.header.childImageSharp.fluid.aspectRatio);
 
@@ -154,6 +169,9 @@ const IndexPage: React.FC<IndexProps> = (props) => {
             </SiteHeaderContent>
             <SiteNav isHome />
           </div>
+          <ThemeSwitchWrapper onClick={() => toggleThemeMode()}>
+            <ThemeSwitchIcon />
+          </ThemeSwitchWrapper>
         </header>
         <main id="site-main" css={[SiteMain, outer]}>
           <div css={inner}>

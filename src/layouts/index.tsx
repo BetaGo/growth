@@ -7,7 +7,7 @@ import { ThemeProvider } from 'emotion-theming';
 // @ts-ignore
 import favicon from '../../src/favicon.ico';
 
-import { ITheme, themeDict } from '../styles/theme';
+import { getTheme, ITheme, themeDict } from '../styles/theme';
 
 import { useThemeMode } from '../hooks/useThemeMode';
 
@@ -286,7 +286,7 @@ const getGlobalStyles = (theme: ITheme) => {
 
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
-      -moz-font-feature-settings: 'liga' on;
+      font-feature-settings: 'liga' on;
     }
 
     ::selection {
@@ -487,8 +487,8 @@ const getGlobalStyles = (theme: ITheme) => {
 };
 
 const IndexLayout: React.FC<IndexProps> = (props) => {
-  const themeMode = useThemeMode();
-  const theme = themeDict[themeMode];
+  const [themeMode = 'dark'] = useThemeMode();
+  const theme = getTheme(themeMode);
   const GlobalStyles = getGlobalStyles(theme);
   return (
     <ThemeProvider theme={theme}>
