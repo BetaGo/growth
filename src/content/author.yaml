@@ -1,10 +1,3 @@
-- id: Ghost
-  avatar: avatars/wantong.png
-  bio: The professional publishing platform
-  twitter: TryGhost
-  facebook: ghost
-  website: https://ghost.org/
-  location: On a plane
 - id: WanTong
   avatar: avatars/wantong.png
   bio: Make life worth living
@@ -12,6 +5,6 @@
   facebook: gouwantong
   weibo: TrueIronMan
   github: BetaGo
-  website: https://life.gwthub.com/
+  website: https://2b.no1.me/
   profile_image: img/alex-knight-326705-unsplash.jpg
   location: wish in your heart

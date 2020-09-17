@@ -2,9 +2,9 @@ const path = require('path');
 
 module.exports = {
   siteMetadata: {
-    title: '忘川',
-    description: 'Make Life Worth Living',
-    siteUrl: 'https://life.gwthub.com', // full path to blog - no ending slash
+    title: '土拨鼠看着自己的影子发出的尖叫',
+    description: 'Make Life Worth Living.',
+    siteUrl: 'https://2b.no1.me', // full path to blog - no ending slash
   },
   mapping: {
     'MarkdownRemark.frontmatter.author': 'AuthorYaml',
@@ -50,8 +50,8 @@ module.exports = {
         siteUrl: 'https://life.gwthub.com',
       },
     },
+    'gatsby-plugin-sass',
     'gatsby-plugin-emotion',
-    'gatsby-plugin-typescript',
     'gatsby-transformer-sharp',
     'gatsby-plugin-react-helmet',
     'gatsby-transformer-yaml',
