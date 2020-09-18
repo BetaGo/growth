@@ -37,7 +37,7 @@ const HomePosts = css`
     .post-card:nth-of-type(6n + 1):not(.no-image) .post-card-image-link {
       position: relative;
       flex: 1 1 auto;
-      border-radius: 5px 0 0 5px;
+      border-radius: 2px 0 0 2px;
     }
 
     .post-card:nth-of-type(6n + 1):not(.no-image) .post-card-image {

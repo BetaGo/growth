@@ -13,7 +13,7 @@ const PostCardImageLink = css`
   position: relative;
   display: block;
   overflow: hidden;
-  border-radius: 5px 5px 0 0;
+  border-radius: 2px 2px 0 0;
 `;
 
 const PostCardImage = styled.div`
@@ -181,7 +181,7 @@ const PostCardRoot = styled.article`
   min-height: 300px;
   background: ${({ theme }) => theme.palette.background.paper} center center;
   background-size: cover;
-  border-radius: 5px;
+  border-radius: 2px;
   box-shadow: rgba(39, 44, 49, 0.06) 8px 14px 38px, rgba(39, 44, 49, 0.03) 1px 3px 8px;
   transition: all 0.5s ease;
 

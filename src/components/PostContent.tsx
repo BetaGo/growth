@@ -14,7 +14,6 @@ export const PostFullContent = styled.section`
   font-size: 2.2rem;
   line-height: 1.6em;
   background: ${({ theme }) => theme.palette.background.default};
-
   @media (max-width: 1170px) {
     padding: 5vw 7vw 0;
   }
@@ -160,7 +159,7 @@ export const PostFullContent = styled.section`
     line-height: 1em;
     font-weight: 400 !important;
     background: ${colors.whitegrey};
-    border-radius: 3px;
+    border-radius: 2px;
   }
 
   p code {
@@ -179,7 +178,7 @@ export const PostFullContent = styled.section`
     line-height: 1.5em;
     /* background: color(var(--darkgrey) l(-3%)); */
     background: ${darken('0.03', colors.darkgrey)};
-    border-radius: 5px;
+    border-radius: 2px;
   }
 
   pre code {

@@ -24,7 +24,7 @@ const SubscribeEmail = styled.input`
   line-height: 1em;
   font-weight: normal;
   user-select: text;
-  border-radius: 5px;
+  border-radius: 2px;
   transition: border-color 0.15s linear;
 
   -webkit-appearance: none;
@@ -59,7 +59,7 @@ const SubscribeFormButton = styled.button`
     ${desaturate('0.1', darken('0.07', colors.blue))} 90%,
     ${desaturate('0.1', darken('0.04', colors.blue))}
   );
-  border-radius: 5px;
+  border-radius: 2px;
   box-shadow: 0 0 0 1px inset rgba(0, 0, 0, 0.14);
 
   -webkit-font-smoothing: subpixel-antialiased;

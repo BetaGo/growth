@@ -35,7 +35,7 @@ const About: React.FC = () => (
       <main id="site-main" className="site-main" css={[SiteMain, outer]}>
         <article className="post page" css={[PostFull, NoImage]}>
           <PostFullHeader>
-            <PostFullTitle>About</PostFullTitle>
+            <PostFullTitle>ABOUT</PostFullTitle>
           </PostFullHeader>
 
           <PostFullContent className="post-full-content">
