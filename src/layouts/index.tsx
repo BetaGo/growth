@@ -297,6 +297,7 @@ const getGlobalStyles = (theme: ITheme) => {
     hr {
       position: relative;
       display: block;
+      overflow: visible;
       width: 100%;
       margin: 2.5em 0 3.5em;
       padding: 0;
