@@ -274,8 +274,8 @@ const getGlobalStyles = (theme: ITheme) => {
     body {
       overflow-x: hidden;
       color: ${theme.palette.text.primary};
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
-        'Open Sans', 'Helvetica Neue', sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial,
+        Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
       font-size: 1.5rem;
       line-height: 1.6em;
       font-weight: 400;

@@ -42,7 +42,6 @@ const AuthorMeta = styled.div`
   justify-content: center;
   align-items: center;
   margin: 0 0 10px 0;
-  font-family: Georgia, serif;
   font-style: italic;
 `;
 
@@ -116,10 +115,10 @@ interface AuthorTemplateProps {
   };
 }
 
-const Author: React.FC<AuthorTemplateProps> = props => {
+const Author: React.FC<AuthorTemplateProps> = (props) => {
   const author = props.data.authorYaml;
 
-  const edges = props.data.allMarkdownRemark.edges.filter(edge => {
+  const edges = props.data.allMarkdownRemark.edges.filter((edge) => {
     const isDraft = edge.node.frontmatter.draft !== true || process.env.NODE_ENV === 'development';
     return isDraft && edge.node.frontmatter.author && edge.node.frontmatter.author.id === author.id;
   });
