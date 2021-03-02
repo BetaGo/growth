@@ -5803,12 +5803,7 @@ eventemitter3@^3.1.0:
   resolved "https://registry.npm.taobao.org/eventemitter3/download/eventemitter3-3.1.2.tgz?cache=0&sync_timestamp=1598517814433&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Feventemitter3%2Fdownload%2Feventemitter3-3.1.2.tgz#2d3d48f9c346698fce83a85d7d664e98535df6e7"
   integrity sha1-LT1I+cNGaY/Og6hdfWZOmFNd9uc=
 
-eventemitter3@^4.0.0:
-  version "4.0.7"
-  resolved "https://registry.npm.taobao.org/eventemitter3/download/eventemitter3-4.0.7.tgz?cache=0&sync_timestamp=1598517814433&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Feventemitter3%2Fdownload%2Feventemitter3-4.0.7.tgz#2de9b68f6528d5644ef5c59526a1b4a07306169f"
-  integrity sha1-Lem2j2Uo1WRO9cWVJqG0oHMGFp8=
-
-eventemitter3@^4.0.7:
+eventemitter3@^4.0.0, eventemitter3@^4.0.7:
   version "4.0.7"
   resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-4.0.7.tgz#2de9b68f6528d5644ef5c59526a1b4a07306169f"
   integrity sha512-8guHBZCwKnFhYdHr2ysuRWErTwhoN2X8XELRlrRwpmfeY2jjuUN4taQMsULKUVo1K4DvZl+0pgfyoysHxvmvEw==
@@ -11858,10 +11853,10 @@ prism-themes@1.4.0:
   resolved "https://registry.npm.taobao.org/prism-themes/download/prism-themes-1.4.0.tgz#2f93a33450532577c7962928655d7b4305fa843d"
   integrity sha1-L5OjNFBTJXfHlikoZV17QwX6hD0=
 
-prismjs@1.21.0:
-  version "1.21.0"
-  resolved "https://registry.npm.taobao.org/prismjs/download/prismjs-1.21.0.tgz#36c086ec36b45319ec4218ee164c110f9fc015a3"
-  integrity sha1-NsCG7Da0UxnsQhjuFkwRD5/AFaM=
+prismjs@1.23.0:
+  version "1.23.0"
+  resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.23.0.tgz#d3b3967f7d72440690497652a9d40ff046067f33"
+  integrity sha512-c29LVsqOaLbBHuIbsTxaKENh1N2EQBOHaWv7gkHN4dgRbxSREqDnDbtFJYdpPauS4YCplMSNCABQ6Eeor69bAA==
   optionalDependencies:
     clipboard "^2.0.0"
 
