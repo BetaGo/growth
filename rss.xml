@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[土拨鼠看着自己的影子发出的尖叫]]></title><description><![CDATA[Make Life Worth Living.]]></description><link>https://2b.no1.me</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 23 Jun 2021 14:18:48 GMT</lastBuildDate><item><title><![CDATA[浏览器多个标签页之间的通信方式]]></title><description><![CDATA[windows.postMessage 适用于页面内的 ； 以及从当前页面用  打开的页面面； EventSource you also run into maximum connections per origin limits when using EventSource…]]></description><link>https://2b.no1.me/synchronize-data-across-documents/</link><guid isPermaLink="false">https://2b.no1.me/synchronize-data-across-documents/</guid><pubDate>Sat, 19 Sep 2020 13:05:02 GMT</pubDate><content:encoded>&lt;h2&gt;windows.postMessage&lt;/h2&gt;
+&lt;p&gt;适用于页面内的 &lt;code class=&quot;language-text&quot;&gt;iframe&lt;/code&gt;； 以及从当前页面用 &lt;code class=&quot;language-text&quot;&gt;window.open()&lt;/code&gt; 打开的页面面；&lt;/p&gt;
+&lt;h2&gt;EventSource&lt;/h2&gt;
+&lt;p&gt;you also run into maximum connections per origin limits when using EventSource over HTTP/1.1, so if you have &gt;6 tabs open then at least one won’t be able to create an EventSource. (This is mostly fixed with HTTP/2+)
+see &lt;a href=&quot;https://stackoverflow.com/questions/16852690/sseeventsource-why-no-more-than-6-connections&quot;&gt;https://stackoverflow.com/questions/16852690/sseeventsource-why-no-more-than-6-connections&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;LocalStorage&lt;/h2&gt;
+&lt;h2&gt;BroadcastChannel&lt;/h2&gt;
+&lt;p&gt;not work in safari&lt;/p&gt;
+&lt;p&gt;There is a feature request bug for BroadcastChannel in Safari: &lt;a href=&quot;https://bugs.webkit.org/show_bug.cgi?id=161472&quot;&gt;https://bugs.webkit.org/show_bug.cgi?id=161472&lt;/a&gt;. It’s currently blocked by a spec issue around partitioning: &lt;a href=&quot;https://github.com/whatwg/html/issues/5803&quot;&gt;https://github.com/whatwg/html/issues/5803&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Service worker&lt;/h2&gt;
+&lt;h2&gt;IDB observers&lt;/h2&gt;
+&lt;p&gt;RXDB&lt;/p&gt;
+&lt;p&gt;参考&lt;a href=&quot;https://youtu.be/9UNwHmagedE&quot;&gt;3.143 ways to synchronize data across documents - HTTP 203&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[自问自答 --2019]]></title><description><![CDATA[2019 年你最值得纪念的事情有哪些？ 4 月底，养了一只可爱的猫猫【布丁】 12 月份，完成了心心念的世界最高澳门塔的蹦极 201…]]></description><link>https://2b.no1.me/self-answer-2019/</link><guid isPermaLink="false">https://2b.no1.me/self-answer-2019/</guid><pubDate>Thu, 13 Feb 2020 16:22:13 GMT</pubDate><content:encoded>&lt;h2&gt;2019 年你最值得纪念的事情有哪些？&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;4 月底，养了一只可爱的猫猫【布丁】&lt;/li&gt;
+&lt;li&gt;12 月份，完成了心心念的世界最高澳门塔的蹦极&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;2019 年 你的情绪是怎么样的？&lt;/h2&gt;
+&lt;p&gt;一月，新年伊始，重拾对艺术与设计的兴趣，感觉有无限的可能性，乐于尝试
+二月，平平淡淡，间歇性情绪失落，经常出去拍照转换心情
+三月，阳光明媚，但焦虑扩大，出游缓解焦虑，效果越来越不明显
+四月，是你的谎言
+五月，与猫斗智斗勇
+六月，间歇性踌躇满志，持续性混吃等死
+七月，吸猫的咸鱼
+八月，新旧认知的碰撞，与房东撕逼。
+九月，平凡，但焦虑且迷茫。
+十月，以为找到了答案，其实并没有
+十一月，咸鱼，但焦虑，轻度抑郁。
+十二月，蹦极放松心情，刺激是刺激，但没有期望中的那么震撼；焦虑依旧。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;2019 年，你失去了什么？&lt;/h2&gt;
+&lt;p&gt;失去了信念。
+对那些以前认为不能妥协的事情做了妥协，做了让步，一退再退。&lt;/p&gt;
+&lt;p&gt;失去了乐观
+对于那些根深蒂固的东西，看不到了改变的可能，进而产生了一股更为悲观的情绪。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;2019 年，你得到了什么？&lt;/h2&gt;
+&lt;p&gt;得到了一点警醒：已有的经验成就了你，但也限制了你；我们总是会下意识地用我们最熟悉与擅长的知识去思考新的问题，而这也恰恰限制了我们在新问题上的想象力。当没有新的认知融入时，已有的认知会变得越来越狭隘。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;如果你能对 2019 年的一件事重新作出选择，你选那件？为什么？&lt;/h2&gt;
+&lt;p&gt;如果能选择，我想回到 2017 年，但也不可能是吧。
+这个目前没有想重新选的，并没有后悔的选择，只是后续不尽人意罢了。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;相较于 2018 年，你觉得 2019 年的你有什么变化？&lt;/h2&gt;
+&lt;p&gt;其实 2018 年的焦虑情绪在 2019 年并没有得到缓解，反而越演越烈。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;对于接下来的日子，有什么期望么？&lt;/h2&gt;
+&lt;p&gt;希望能开心起来&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;对现在的自己，以及过去的自己说句话吧&lt;/h2&gt;
+&lt;p&gt;To make life worth living!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[工作的这两年]]></title><description><![CDATA[…]]></description><link>https://2b.no1.me/work-two-years/</link><guid isPermaLink="false">https://2b.no1.me/work-two-years/</guid><pubDate>Sun, 10 Nov 2019 16:10:11 GMT</pubDate><content:encoded>&lt;h3&gt;技术改变世界？&lt;/h3&gt;
+&lt;p&gt;一开始是有着这样一种信念，&lt;strong&gt;技术改变世界&lt;/strong&gt; 成为技术大佬，带动世界进步。
+真正走上工作岗位之后，发现，所谓用到的技术，其实并没有什么真正的技术含量，按照某些既定的模式，搬砖，似乎成了常态；
+无尽的需求和加班构成了工作的主要内容。对于常规业务，技术选择上基本上就是，什么技术用的人多，大厂都在用啥，我们就用啥；
+对于一些KPI工程，就是看看业界有哪些开源的工程，我们拿来魔改一发，或是照着抄一个，美其名曰自主研发，技术可控。&lt;/p&gt;
+&lt;p&gt;渐渐感觉到，对于工作而言，或者说是对于公司而言；技术在大多数情况下并不是核心的竞争力，而只是实现目的的一种手段而已。
+换句话说就是，不管你用什么技术，东西弄出来就行了，弄得越快越好，最好是找用的人多的，公司好招人；把人开了也好找到替代的。&lt;/p&gt;
+&lt;p&gt;作为一个有技术追求的人，更可能的是期望自己在技术上有不断的突破，有原创性，有远瞻性；而对于公司而言，更期望的是把技术作为一种可以量化的东西，让程序员可以像工厂的工人一样，可以稳定持续的产出。这就很容易造成双方在目标上的冲突，并持续进行博弈（996与996的工作状态）。&lt;/p&gt;
+&lt;h3&gt;产品？技术？&lt;/h3&gt;
+&lt;p&gt;关于产品经理和程序员的撕逼话题已经够多的了，这两个的冲突，其实也是在于产品经理和程序员两种职业在目标的一致性上产生的分期。&lt;/p&gt;
+&lt;p&gt;我们所看到的技术实现和真正去实现某项技术，懂技术和不懂技术的人所看到的难易程度是不同的。例如百度看起来就是一个搜索框而已；但背后的技术却是需要无数聪明的人历经多年来完成的。&lt;/p&gt;
+&lt;p&gt;对技术上的偏差其实还好解决，智力没问题的话，大家好好商量解释清楚也就可以了，但工作怎么可能这么简单呢。&lt;/p&gt;
+&lt;p&gt;某天你接到了一个需求，短短两句话；
+或者是截取了某竞品的一张截图，然后说，这个我们也要。
+再或者，直接跟你说，&lt;em&gt;我们也做个xxx吧，我也不太懂，你懂技术，你自己看着做&lt;/em&gt;
+诸如此类，让人火大。&lt;/p&gt;
+&lt;p&gt;好的程序员难找，好的产品经理更是难求。&lt;/p&gt;
+&lt;p&gt;什么是好的需求呢？个人感觉，提需求，以下三点是基本要求&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;目的清晰&lt;/li&gt;
+&lt;li&gt;方案可行&lt;/li&gt;
+&lt;li&gt;结果可验证&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;团队与工作内容？&lt;/h3&gt;
+&lt;p&gt;不同的团队分配工作的方式也是有些不一样的；&lt;/p&gt;
+&lt;h4&gt;跟着项目走，全心服务某一项目&lt;/h4&gt;
+&lt;p&gt;从个人角度来讲，还是比较喜欢这样的方式的；跟着项目一起走，随着熟悉度的加深，项目内成员的合作会更为顺畅，同时也会对项目更有感情，更有参与感。&lt;/p&gt;
+&lt;p&gt;但是，从公司层面来看，这样会看到某些时间A组人特别闲，B组人特别忙的情况；会感觉工作不饱和。&lt;/p&gt;
+&lt;h4&gt;哪里有需要就去哪里&lt;/h4&gt;
+&lt;p&gt;这种方式基本上很少出现一部分人特忙另一部分特别闲的情况，谁闲就给谁分配工作；从整体来看，感觉上是时间得到了充分的利用，但是，这种方式会很大的降低人的参与感，人的积极度会变得较低；很容易产生 &lt;em&gt;只要东西昨晚就行了，至于结果如何跟我有没关系&lt;/em&gt; 这样的消极想法。&lt;/p&gt;
+&lt;h3&gt;成长空间？&lt;/h3&gt;
+&lt;p&gt;// TODO：
+谁不渴望成长呢？&lt;/p&gt;
+&lt;h3&gt;未来？&lt;/h3&gt;
+&lt;p&gt;// TODO：
+希望我们都有美好的未来。&lt;/p&gt;</content:encoded></item><item><title><![CDATA[关于目标及执行效果的反思]]></title><description><![CDATA[…]]></description><link>https://2b.no1.me/feedback-for-overcome-difficult-situations/</link><guid isPermaLink="false">https://2b.no1.me/feedback-for-overcome-difficult-situations/</guid><pubDate>Sat, 13 Apr 2019 12:02:46 GMT</pubDate><content:encoded>&lt;p&gt;两周前，定了学英语的目标。
+现在，两周过去了，执行情况很差。&lt;/p&gt;
+&lt;p&gt;只有前几天有学习，接下来近一周多的时间都没有学。&lt;/p&gt;
+&lt;p&gt;现在正式宣告计划失败。&lt;/p&gt;
+&lt;p&gt;分析一下计划不能正常执行的原因：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;执行力不足：&lt;/p&gt;
+&lt;p&gt;经过这两周的实验，不得不承认一件事：&lt;strong&gt;自己的执行力真的是弱爆了&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;执行力不足的原因很多：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;注意太容易分散；
+例如当我写完前面这一行后，手机震动了一下，只是一条垃圾信息，却能让我又刷了近 20 分钟的微博，才想起我还要写东西。&lt;/li&gt;
+&lt;li&gt;动力不足；
+强迫自己去坚持做一件事情是很困难的。强迫自己去做一件事是需要动力的，这个动力可以是外部压力，也可以是内心的渴望。不论是外部动力，还是内心提供的动力，总是至少要有一个来鞭策自己的。当一个都没有，或者是动力很弱时，坚持就变成了一件极度困难的事情。&lt;/li&gt;
+&lt;li&gt;惰性；
+很多时候明明觉得自己要振作起来，不能这样颓废，但是。。。总能给自己找到懒惰的藉口。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;目标制定可行性不够：&lt;/p&gt;
+&lt;p&gt;定立的目标初看并没有什么问题，但是在执行时却发现，这个目标制定的有些超出自己的能力范围。&lt;/p&gt;
+&lt;p&gt;一周 500 个单词，平均下来，一天是 70 多个单词。用背单词软件记 20 个单词大概需要 30 分钟（包括单词的中英互译和拼写），70 多个单词的话就需要两个小时的时间，这对于平时的工作日来讲，耗时有些太多，在前几天感觉自己达不到预期时，内心就有了放弃的想法。&lt;/p&gt;
+&lt;p&gt;可以说，不合理的目标非常容易让人产生挫败感，导致一步步放弃对目标的追求。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;关于下一步的计划：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;找到驱动力；发掘自己内心的力量，寻求一下其他人的帮助；找到合适的驱动力。&lt;/li&gt;
+&lt;li&gt;减少注意力的分散；屏蔽手机不重要通知，设立无手机时间。&lt;/li&gt;
+&lt;li&gt;重新评估和安排下一步的计划；尽量简单易行，能有收获感，给人能坚持下去的动力。&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[关于瓶颈期的反思]]></title><description><![CDATA[近一段时间，觉得自己进入了瓶颈期。焦虑，不安，与迷茫构成了近期心态的主旋律。 先不找原因，只客观论述感受。 首先是感觉学习的投入很难有产出。 技术方面，处于边学边忘的状态，导致学了很多’hello world…]]></description><link>https://2b.no1.me/overcome-difficult-situations/</link><guid isPermaLink="false">https://2b.no1.me/overcome-difficult-situations/</guid><pubDate>Sun, 31 Mar 2019 15:35:25 GMT</pubDate><content:encoded>&lt;p&gt;近一段时间，觉得自己进入了瓶颈期。焦虑，不安，与迷茫构成了近期心态的主旋律。&lt;/p&gt;
+&lt;p&gt;先不找原因，只客观论述感受。&lt;/p&gt;
+&lt;p&gt;首先是感觉学习的投入很难有产出。&lt;/p&gt;
+&lt;p&gt;技术方面，处于边学边忘的状态，导致学了很多’hello world’级别的东西，并没有什么收获感。对于现有工作的内容，并没有太多的的技术挑战与难关进行攻克，技术发展进入瓶颈。&lt;/p&gt;
+&lt;p&gt;思维方面，平静的生活带来了思想上的安逸。脑海中的问题变的很少，没有从前那样容易陷入沉思了。虽然也有看书，但是没有像以前那种，看完一些东西感觉自己思想受到了洗涤，有种拨开云雾见青天的感受。仅从读书这一方面来讲，思想受到的冲击变小了。&lt;/p&gt;
+&lt;p&gt;最为重要的一点在于，变得有些浮躁了。因为浮躁与焦虑，而忍不住让自己尝试忙碌起来做一些东西，但是在这种情形下做出的东西往往不合预期，和理想差距很大。糟糕的结果又进一步加重了浮躁与焦虑的心情，形成了恶性循环。&lt;/p&gt;
+&lt;p&gt;就像一只在水中的青蛙，知道温水煮青蛙的故事，感觉自己像是那一只在故事里被放在温水中的青蛙，想跳出水坑，却使不上力。&lt;/p&gt;
+&lt;p&gt;想来自己最近最大的失误应该就是有太多焦虑性动作，在这些多余的动作中浪费了太多精力。&lt;/p&gt;
+&lt;p&gt;接下来的时间里，首要任务是做好规划，一个真正可行的，可验证成果的，可复盘的规划。&lt;/p&gt;
+&lt;p&gt;规划分以下几部分： &lt;strong&gt;预期目标&lt;/strong&gt;，&lt;strong&gt;阶段性目标&lt;/strong&gt;，&lt;strong&gt;成果检验标准&lt;/strong&gt;，&lt;strong&gt;最终验收标准&lt;/strong&gt;，&lt;strong&gt;目标回顾&lt;/strong&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;预期目标：&lt;/strong&gt; 计划要做的一件事，最终要达到一个怎样的效果。例如（学英语，目标为雅思 3500 常用词汇，为期两个月）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;阶段性目标：&lt;/strong&gt; 一周为一个阶段，共八周，一周约 500 个单词，每周末，对这 500 个单词进行测验，根据测验结果调整下周计划，记录完成情况。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;成果检验标准：&lt;/strong&gt; 每周末用两个小时来进行总测验，正确率在 80%以上，即为合格。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;最终验收标准：&lt;/strong&gt; 平均周正确率在 80%以上即验收通过。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;目标回顾：&lt;/strong&gt; 根据目标完成情况，分析原因。形成文字记录，以便日后查阅。&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[自问自答 --2018]]></title><description><![CDATA[2018 年你最大的收获是什么？ 回首过去的 2018，真的自我感觉没有什么值得称道的地方，立的 flag…]]></description><link>https://2b.no1.me/self-answer-2018/</link><guid isPermaLink="false">https://2b.no1.me/self-answer-2018/</guid><pubDate>Wed, 27 Feb 2019 16:22:13 GMT</pubDate><content:encoded>&lt;h2&gt;2018 年你最大的收获是什么？&lt;/h2&gt;
+&lt;p&gt;回首过去的 2018，真的自我感觉没有什么值得称道的地方，立的 flag 一样都没有完成。
+技术上有那么一丝的进步，但是远低于预期。&lt;/p&gt;
+&lt;p&gt;如果说最大的收获的话，算是对自己的认识又更清晰了一点。尤其是经过这一年，暴露出了自己诸多的缺陷；心理，人格与认知，都有了巨大的变化。
+这应该是 2018 年最大的收获吧。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;如果你能对 2018 年的一件事重新作出选择，你选那件？为什么？&lt;/h2&gt;
+&lt;p&gt;2018 年做的最失败的决定是放弃了睡前的阅读和反思时间。&lt;/p&gt;
+&lt;p&gt;因为这一做法间接地影响了这一年的心态。&lt;/p&gt;
+&lt;p&gt;放弃了这个习惯，这算是出于一种近乎于报复的心态。因为之前加班较多，感觉没有空闲时间，但每天还是会抽出半个小时到一个小时的时间去看点严肃的书，就感觉很累，但很充实，直到后来身体有些扛不住，就换了工作。&lt;/p&gt;
+&lt;p&gt;在换了工作后，一开始很闲，就自以为有大把的时间可以挥霍，自以为什么时间看书都可以，反正有的是时间；也正是这样的思想造就了今年自己的退步。&lt;/p&gt;
+&lt;p&gt;学如逆水行舟，不进则退。&lt;/p&gt;
+&lt;p&gt;人的思维与认知也是也是这样，当你不再去拓展你的认知范围，锻炼你的思维时，你的认知范围就会越来越窄，最后被困在了自己认知的牢笼里，整个人的气质与秉性都开始一点点变坏，自信心被一点点摧毁，人也变得容易暴躁起来。&lt;/p&gt;
+&lt;p&gt;如果想要优秀，请让优秀成为一种习惯。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;相较于 2017 年，你觉得 2018 年的你有什么变化？&lt;/h2&gt;
+&lt;p&gt;如果说 2017 年的我是目标明确，对未来充满向往与好奇的人的话，那么 2018 年的我应该多了自我怀疑与自我放纵。&lt;/p&gt;
+&lt;p&gt;怀着改变世界的心，做着看不到意义的事；千万分的努力，有时却还不如突如其来的好运。没错，这个世界就是这么不公平，但你也无能为力。
+这样的现实，给自我放纵提供了完美的理由，也让我对自己的追求有了怀疑。再加上 2018 年很少有深层次的反省与思考，也就让这一年的基调变得有些灰暗。&lt;/p&gt;
+&lt;p&gt;现在想来，其实对于这个世界现在的样子，我只能接受，但是未来的世界是什么样子的，谁都说不准。我能做的就是，保持自己的本心清明，活出自己喜欢的样子，现在怎样没那么重要，知道自己要什么，然后努力争取，这件事很重要。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;对于接下来的日子，有什么期望么？&lt;/h2&gt;
+&lt;p&gt;请认真，自信，乐观，充满好奇地生活。给自己以及喜欢的人，带来幸福。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;对现在的自己，以及过去的自己说句话吧&lt;/h2&gt;
+&lt;p&gt;别让未来的你后悔你现在的决定！&lt;/p&gt;
+&lt;p&gt;希望当你回首你的过去时，可以开心地说：如果我的人生能重来，我还是要选择活成现在的样子！&lt;/p&gt;</content:encoded></item><item><title><![CDATA[初识摄影]]></title><description><![CDATA[这一年，最大的开销是买了相机。自己给自己的 2…]]></description><link>https://2b.no1.me/camera-2018/</link><guid isPermaLink="false">https://2b.no1.me/camera-2018/</guid><pubDate>Wed, 09 Jan 2019 14:12:45 GMT</pubDate><content:encoded>&lt;p&gt;这一年，最大的开销是买了相机。自己给自己的 24 岁生日礼物。&lt;/p&gt;
+&lt;p&gt;为什么要买个相机？&lt;/p&gt;
+&lt;p&gt;或许是想做个文艺小青年，亦或许是嫌弃手机拍不出自己心中喜欢的画面吧，或许是想着有了相机，生活就会有那么一丝丝的不同了吧。总之，我也记不清自己为什么要买相机了。&lt;/p&gt;
+&lt;p&gt;当最开始有空拿着相机去拍照时，真的感觉和手机拍照是完全不同的体验。但也验证了一件事情，拍不出想要的画面，真的和设备没有太大的关系。&lt;/p&gt;
+&lt;p&gt;诚然，相机拍出来的画质与效果的确比手机要好上许多许多，但当出去拍摄过几次之后，渐渐明白，我缺少的，不是相机，而是美感。&lt;/p&gt;
+&lt;p&gt;也就引申出了一个问题：什么是美？&lt;/p&gt;
+&lt;p&gt;其实有许多照片亦或是旅途中真实的风景，会让你感觉到，真好看，但是却难以形容它好看在哪里。同样也有一些照片，你能直观的感觉到好看，但好看等于美么？不等吧。&lt;/p&gt;
+&lt;p&gt;好看应该只是一种浅层的体验，而美，更像是一种感动。&lt;/p&gt;
+&lt;p&gt;就像是有那么一种风景，你看到它的一瞬间，你觉得灵魂被触动了，拿出相机，按下快门，凝固这一瞬间的感动与一张相片上，我想这才是摄影的意义。&lt;/p&gt;
+&lt;p&gt;摄影是瞬间的艺术，是记忆的载体，实在以后漫长的时光中，你再次看到相片是，会重新体验到当时的感动，那一瞬间的震撼。&lt;/p&gt;
+&lt;p&gt;我拍不出这样的片子，我反思，自己最大的问题在于，不该理性的时候理性，不该感性的时候感性。想来有太久的时光没有真正被感动过了。&lt;/p&gt;
+&lt;p&gt;为掩盖脆弱而立起的理性的监牢将自己的心困住了，用坚硬的外壳来保护那脆弱的玻璃心，现在想来真不是一个好的选择呢。&lt;/p&gt;
+&lt;p&gt;心应当是柔软而坚韧的啊。&lt;/p&gt;
+&lt;p&gt;愿新的一年，拥有一颗柔软而坚韧的心。遇到感动，记录感动。&lt;/p&gt;</content:encoded></item><item><title><![CDATA[2018年度总结-技术篇]]></title><description><![CDATA[What you are you do not see, what you see is your shadow. — Rabindranath Tagore…]]></description><link>https://2b.no1.me/2018-summary-tech/</link><guid isPermaLink="false">https://2b.no1.me/2018-summary-tech/</guid><pubDate>Tue, 01 Jan 2019 12:29:19 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;What you are you do not see, what you see is your shadow.&lt;br&gt;
+— &lt;a href=&quot;https://en.wikipedia.org/wiki/Rabindranath_Tagore&quot;&gt;Rabindranath Tagore&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;作为一个目前还是靠技术来讨生活的码农，是很有必要去复盘一下过去的一年。&lt;/p&gt;
+&lt;p&gt;其实，当决定复盘的主题为技术时，一个之前没怎么想过，但却又极其重要的问题突然出现在了脑海里：&lt;strong&gt;什么是技术？&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;是学了点编程语言，面对各种奇奇怪怪的需求，能砍掉的就砍掉，砍不掉的能找到合适的方法将其实现？（业务）&lt;/li&gt;
+&lt;li&gt;是刷了 N 道算法题，对各种出题套路了然于心，扫一眼题目就能看破考点，算法与数据结构功底扎实？（算法）&lt;/li&gt;
+&lt;li&gt;是精通某门语言或某个框架，对其各种特性如数家珍，甚至是对当前语言/框架发展状况不满意，自立门户？（语言/框架）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这些感觉上都算，但却又觉得少了些重要的东西。&lt;/p&gt;
+&lt;p&gt;其实如果按以上三点来评价的话，这一年，还算是有成长，虽然没有达到上面写的那种程度，但是至少有了份所谓技术上的自信，不会因遇到一些比较难的问题而退缩且不知所措，而是相信难题，总是能被解决的，无非是时间的问题。而上面所列的三点，相信只要有一定的时间，都是可以达成的。&lt;/p&gt;
+&lt;p&gt;但这真的就是技术的追求？&lt;/p&gt;
+&lt;p&gt;技术应该是用来解决问题，提供便利，改善生活的。&lt;/p&gt;
+&lt;p&gt;技术不能只是冷冰冰的技术，&lt;strong&gt;用于解决问题的艺术才是真技术&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;回想过去的一年，其实所学的诸多所谓的技术，都属于只是学了，但从来都没怎么用过，以至于到最后，都忘得差不多了，现在回想起来，感觉技术上的时间利用效率又被打了折扣。&lt;/p&gt;
+&lt;p&gt;况且，目前技术的发展速度又是飞快，新技术层出不穷，不得不感叹：吾生有涯而学无涯。可以跟着技术的趋势走，随着那起起伏伏的潮流涌动，朝着那一阵又一阵的风口奔波。可以维持的了生存，却撑不起生活。&lt;/p&gt;
+&lt;p&gt;时至今日，越来越觉得一个优秀的程序员也应当是一名优秀的产品经理。你需要知道这个世界需要什么，才能真正与这世界好好地谈谈。&lt;/p&gt;
+&lt;p&gt;你需要知道，自己在做什么，自己做的东西可能会影响到哪些人，会给他们带来怎样的改变，而他们又会怎么看待这些变化。&lt;/p&gt;
+&lt;p&gt;新的一年，希望在扎实技术基础的同时，也能更敏锐地觉察到时代的变化，不仅要成为一个善于解决问题的人，也要成为一个善于发现问题的人呐。&lt;/p&gt;</content:encoded></item><item><title><![CDATA[2018年度总结-生活篇]]></title><description><![CDATA[Stray birds of summer come to my window to sing and fly away. And yellow leaves of autumn, which have no songs, flutter and fall there with…]]></description><link>https://2b.no1.me/2018-summary-life/</link><guid isPermaLink="false">https://2b.no1.me/2018-summary-life/</guid><pubDate>Mon, 31 Dec 2018 02:01:59 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;Stray birds of summer come to my window to sing and fly away. And yellow leaves of autumn, which have no songs, flutter and fall there with a sign.&lt;br&gt;
+— &lt;a href=&quot;https://en.wikipedia.org/wiki/Rabindranath_Tagore&quot;&gt;Rabindranath Tagore&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;p&gt;酝酿中……&lt;/p&gt;</content:encoded></item><item><title><![CDATA[2018流水账]]></title><description><![CDATA[…]]></description><link>https://2b.no1.me/2018-life-simple/</link><guid isPermaLink="false">https://2b.no1.me/2018-life-simple/</guid><pubDate>Tue, 25 Dec 2018 15:21:36 GMT</pubDate><content:encoded>&lt;p&gt;一月份，家里来了一个可爱的小家伙，奶壳儿~全世界最可爱的小猫咪~超级粘人又超级懂事的小家伙。&lt;/p&gt;
+&lt;p&gt;说起来也是特别的缘分，奶壳是朋友的猫，不过那段时间朋友有点忙，就暂时养在我这里了。&lt;/p&gt;
+&lt;p&gt;刚来的时候特别喜欢晚上喵喵地叫，搞得人睡不好觉，非要把它抱到床上才不叫；&lt;/p&gt;
+&lt;p&gt;一开始特别担心晚上睡觉翻身会压到它，所以躺在床上一动都不敢动，第二天醒来，发现它贴着脸睡在枕边，还打呼噜，哈哈哈哈哈，真的是特别可爱啊。&lt;/p&gt;
+&lt;p&gt;不过这小家伙身体一直不怎么好，可能是冬天太冷，它又太小只，一开始是眼睛一直睁不太开，滴了一周眼药差不多好了时，却又感冒了，虽然生病，但小家伙还是那么的活蹦乱跳，玩儿的特别开心，揉个小纸团它都能自己玩儿很久，可爱。&lt;/p&gt;
+&lt;p&gt;那段时间工作压力也挺大，不过想到家里还有一只可爱的小猫咪在等着，心情也阳光了起来呢。（据说这小家伙现在特别胖，哈哈哈哈）&lt;/p&gt;
+&lt;p&gt;接下来的几个月，就是枯燥的工作与加班，三月份开始，一批批熟悉的同事离职。&lt;/p&gt;
+&lt;p&gt;四月份买了新电脑，心心念许久的 surface book。&lt;/p&gt;
+&lt;p&gt;五一加班。&lt;/p&gt;
+&lt;p&gt;五月中旬，换了工作，来到了现在的公司。&lt;/p&gt;
+&lt;p&gt;刚开始的两个月，不忙，挺好，终于有了真正的周末。&lt;/p&gt;
+&lt;p&gt;周末，出去逛逛，在运河边散散步，看看沿途的风景，喂喂路边的野猫，尝尝街边的奶茶。&lt;/p&gt;
+&lt;p&gt;如遇阴雨天，在家看看书，敲敲代码，亦是一段闲适的时光。&lt;/p&gt;
+&lt;p&gt;转眼间来到了八月，人生的第一次出差，去了上海。谁知这一去竟是整个夏秋。&lt;/p&gt;
+&lt;p&gt;这段日子，真的是只有三件事：吃饭，睡觉，工作。几乎没有假期。连续的低效加班工作，真的是有很严重的后遗症，生活的节奏被打乱了之后，恢复起来真的很困难，之前，我觉得自己做事都很高效愉悦，现在，真的是感觉效率不高，且没有那种专注的愉悦感了，还有就是感觉生活的热情也被消磨了许多，这也算是一种别样的人生经历吧。&lt;/p&gt;
+&lt;p&gt;八月中旬，搬家，租住在了离上班地点更近的小区，然后因为出差，前两个月几乎都没有住过。&lt;/p&gt;
+&lt;p&gt;九月底，拥有了第一台相机，作为自己给 24 岁的生日礼物。愿记录日后的泪水亦或欢笑，光影相随，砥砺前行。&lt;/p&gt;
+&lt;p&gt;十一月，终于出差结束了。开始了新的项目，直至今日。&lt;/p&gt;
+&lt;p&gt;就这样，平平淡淡的一年过去了，时间过得真的是好快。还没好好地感受，却又到了该告别的日子。这一年，有许多想做的却因为种种原因没有做的事情，例如雅思，例如学琴。也有许多意料之外的收获，例如学了摄影，例如认识了许多特别的人。&lt;/p&gt;
+&lt;p&gt;来年又会是怎样的一番风景呢？&lt;/p&gt;</content:encoded></item></channel></rss>

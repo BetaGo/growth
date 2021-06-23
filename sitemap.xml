@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url> <loc>https://2b.no1.me/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://2b.no1.me/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://2b.no1.me/2018-life-simple/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://2b.no1.me/2018-summary-life/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://2b.no1.me/2018-summary-tech/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://2b.no1.me/camera-2018/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://2b.no1.me/self-answer-2018/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://2b.no1.me/overcome-difficult-situations/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://2b.no1.me/feedback-for-overcome-difficult-situations/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://2b.no1.me/work-two-years/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://2b.no1.me/self-answer-2019/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://2b.no1.me/synchronize-data-across-documents/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://2b.no1.me/tags/life/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://2b.no1.me/tags/tech/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://2b.no1.me/tags/frontend/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://2b.no1.me/tags/前端/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://2b.no1.me/tags/javascript/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://2b.no1.me/author/wan-tong/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://2b.no1.me/about/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+</urlset>
